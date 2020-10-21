@@ -1,0 +1,214 @@
+html {
+    font-size: 100%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    line-height: 1.3;
+    position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+}
+
+p {
+    margin: 0px;
+    padding: 0px;
+}
+
+.flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.flex-jc-sb {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.flex-jc-c {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.flex-ai-c {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+@media (max-width: 64em) {
+    .hide-for-mobile {
+        display: none;
+    }
+}
+
+@media (min-width: 63.9375em) {
+    .hide-for-desktop {
+        display: none;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+button {
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    padding: 8px 16px;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+@media (min-width: 39.9375em) {
+    .navbar {
+        margin: 20px 100px 0px 100px;
+    }
+}
+
+.navbar__brand a {
+    color: black;
+    font-size: 2rem;
+}
+
+.navbar__brand a:hover {
+    color: red;
+}
+
+.navbar__brand a>span {
+    color: red;
+}
+
+.navbar__links {
+    list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 75%;
+}
+
+.navbar__links li {
+    padding: 8px;
+}
+
+.navbar__links li a {
+    color: black;
+    font-size: 1rem;
+}
+
+.navbar__links li a:hover {
+    color: red;
+}
+
+.navbar__links li a.active {
+    color: red;
+}
+
+.navbar__menu {
+    display: none;
+    cursor: pointer;
+}
+
+.navbar__menu>div {
+    background-color: black;
+    width: 30px;
+    height: 3px;
+}
+
+.navbar__menu>div:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+@media screen and (max-width: 1219px) {
+    .navbar__links {
+        -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: left;
+        -ms-flex-pack: left;
+        justify-content: left;
+        padding-left: 0px;
+        overflow: hidden;
+        height: 0;
+        opacity: 0;
+        -webkit-transition: height 0ms 400ms, opacity 900ms 0ms;
+        transition: height 0ms 400ms, opacity 900ms 0ms;
+    }
+
+    .navbar__links li {
+        padding: 8px 0;
+    }
+
+    .navbar__menu {
+        display: block;
+    }
+}
+
+.nav-active {
+    height: auto;
+    opacity: 1;
+    -webkit-transition: height 0ms 400ms, opacity 900ms 0ms;
+    transition: height 0ms 400ms, opacity 900ms 0ms;
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        display: none;
+    }
+
+    to {
+        display: -webkit-box;
+        display: flex;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        display: none;
+    }
+
+    to {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+}
